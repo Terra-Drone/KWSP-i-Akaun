@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>KWSP | i-Akaun(Member)</title>
+	<!--stylesheet-->
+	<link href="../secured/css/main_epf.css" rel="stylesheet" type="text/css"/>
+	<!--bootstrap-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!--JQuery-->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<![if IE 6]>
+	<style type="text/css">
+		#header #tab {
+			padding: 80px 10px 0 174px;
+			float:left;
+			width:550px;
+			height:30px;
+			line-height:normal;
+		}
+
+		#header #tab a {
+			padding: 10px 0 0 10px;
+			font-weight:normal;
+			float: left;
+			color:#c70108;
+			font-size:12px;
+			text-decoration:none;
+			height:20px;
+			margin-right:5px;
+		}
+
+		#header #tab a span {
+			padding: 10px 10px 0 0;
+			float: none;
+			display:inline;
+		}
+
+		.customFBGeneral ul.feedbackPanel{ margin: 5px 30px !important; }
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+<div class="responsive-navi">
+	<div class="responsive-navi-mobile" id="navbar">
+		<div id="logo">
+			<a href="https://www.kwsp.gov.my/en/home"><img src="../secured/images/logo_en.png"></a>
+		</div>
+		<div class="rc_nav" id="navi">
+			<ul>
+				<li class="dropdown" id="member"><p>MEMBER</p>
+					<ul class="dropdown-content">
+						<li><a href="https://www.kwsp.gov.my/member/overview">OVERVIEW</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/register">REGISTER</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/contribution">CONTRIBUTION</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/withdrawal">WITHDRAWALS</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/investment">INVESTMENT</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/nomination">NOMINATION</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/retirement-advisory-service">RETIRMENT ADVISORY SERVICE</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" id="emloyer"><p>EMPLOYER</p>
+					<ul class="dropdown-content">
+						<li><a href="https://www.kwsp.gov.my/employer/overview">OVERVIEW</a></li>
+						<li><a href="https://www.kwsp.gov.my/employer/what-you-need-to-know">WHAT YOU NEED TO KNOW</a></li>
+						<li><a href="https://www.kwsp.gov.my/employer/register">REGISTER</a></li>
+						<li><a href="https://www.kwsp.gov.my/employer/contribution">CONTRIBUTION</a></li>
+						<li><a href="https://www.kwsp.gov.my/employer/update-maintain-records">UPDATE & MAINTAIN RECORDS</a></li>
+						<li><a href="https://www.kwsp.gov.my/employer/overview/compliance-and-enforcement">COMPLIANCE & ENFORCEMENT</a></li>
+						<li><a href="https://www.kwsp.gov.my/employer/e-payroll">e-PAYROLL</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" id="about"><p>ABOUT EPF</p>
+					<ul class="dropdown-content">
+						<li><a href="https://www.kwsp.gov.my/member/overview">OVERVIEW</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/register">REGISTER</a></li>
+						<li><a href="https://www.kwsp.gov.my/member/contribution">CONTRIBUTION</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" id="contact"><p>REACH US</p>
+					<ul class="dropdown-content">
+						<li><a href="https://www.kwsp.gov.my/member/overview">OVERVIEW</a></li>
+						<li><a href="">REGISTER</a></li>
+						<li><a href="">CONTRIBUTION</a></li>
+					</ul>
+				</li>
+				<li class="dropdown" id="login"><p>LOGIN</p>
+					<ul class="dropdown-content">
+						<li><a href="">MEMBER</a></li>
+						<li><a href="">REGISTER</a></li>
+						<li><a href="">CONTRIBUTION</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="hideDrop()">&#9776;</a></li>
+			</ul>
+		</div>
+		<div class="lang">
+			<ul>
+				<li><a href="login_bm.html">BM</a></li>
+				<li><a href="" class="selected">EN</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="main" style="background-image: url(../secured/images/employees.png);">
+	<div class="col-md-12">
+		<div class="container">
+			<div class="welcome-text"> Welcome to i-Akaun (Member) </div>
+
+			<div class="row">
+				<div class="login-wrapper">
+					<div class="login-box">
+						<div class="login-icon"> <img src="../secured/images/login.png"> </div>
+						<input placeholder="My User ID" class="login-input" id="user_id" maxlength="20" value="" required>
+						<div>
+							<button class="login-btn" type="button" name="button">
+								<img src="../secured/images/unlock.png" id="login-btn-icon">
+							</button>
+						</div>
+					</div>
+					<!--Forgot login-->
+					<div class="forgot-login" onclick="recoverLogin()">
+						Forgot User ID/Password?
+						<!--span class="popup">Test</span-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="content-login">
+	<div class="col-md-12">
+		<div class="row content">
+			<div class="item">
+				<img src="../secured/images/member_app_en.jpg" alt="i-Akaun App">
+				<a class="overlay" href="http://onelink.to/8mxw69"><p>Download i-Akaun App</p></a>
+			</div>
+			<div class="item">
+				<img src="../secured/images/i-saraan.jpg" alt="i-Akaun App">
+				<a class="overlay" href="https://www.kwsp.gov.my/en/member/contribution/i-saraan"><p>i-Saraan</p></a>
+			</div>
+			<div class="item">
+				<img src="../secured/images/i-saraan.jpg" alt="i-Akaun App">
+				<a class="overlay" href="https://www.kwsp.gov.my/en/member/contribution/i-saraan"><p>Make an Appointment</p></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+
+</div>
+<script src="../secured/js/function.js" charset="utf-8"></script>
+</body>
+</html>
