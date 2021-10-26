@@ -1,6 +1,10 @@
+var navbar = document.getElementById("navbar");
+var navi = document.getElementById("navi");
+var dropcontent = document.getElementsByClassName('dropdown-content');
+var dim = document.getElementsByClassName("dim");
+
 //NAVBAR SETTINGS
 window.onscroll = function() {stickyNav()};
-var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 function stickyNav() {
   navbar.style.transition= "350ms ease";
@@ -13,20 +17,25 @@ function stickyNav() {
 
 //Hide options on small screen
 function hideDrop() {
-  var navi = document.getElementById("navi")
   navbar.style.transition= "350ms ease";
   if (navi.className === "rc_nav") {
-      navbar.classList.add("responsive");
+      navi.classList.add("responsive");
   } else {
       navi.classList.remove("responsive");
   }
+  if (dropcontent.style.display == "block") {
+     dim.style.display = "block";
+      navbar.style.boderRadius = "125rem 0 0 125rem";
+  } else {
+     dim.style.display = "none";
+     navbar.style.boderRadius = "125rem";
+  }
 }
 
-//Dim screen
-var dim = document.getElementsByClassName("dim");
-navi.onmouseover = function() { dim.style.display = "block"; }
-navi.onmouseout = function() { dim.style.display = "none";  }
-//FORGOT LOGIN
-function recoverLogin() {
-
+//MAIN PAGE
+//Date for chart
+window.onload = function showDate() {
+  today = new Date();
+  var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+  document.getElementById("date").innerHTML = date;
 }
