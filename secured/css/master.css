@@ -34,17 +34,13 @@ ul li {
 }
 
 .main {
-	background-color: #ffffff;
-	background-repeat: no-repeat;
 	background-attachment: scroll;
 	background-position: top;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
+	background-repeat:no-repeat;
 	background-size: cover;
-	-o-background-size: cover;
 	text-align: center;
 	color: #171717;
-	min-height: 80vh;
+	min-height: 75vh;
 	margin-bottom: 10px;
 }
 .col-md-12 {
@@ -373,6 +369,14 @@ ul li {
 .footer {
 
 }
+/*Main Page*/
+#myAkaun {
+	min-width: 450px;
+	max-width: 450px;
+	margin: auto;
+}
+
+/*Size Compat*/
 @media screen and (max-width: 942px) {
   .rc_nav .dropdown {
 		display: none;
@@ -456,5 +460,8 @@ ul li {
 	}
 	.overlay p{
 		font-size: 30px;
+	}
+	#myAkaun {
+		max-width: 325px;
 	}
 }
