@@ -14,11 +14,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.esm.js" integrity="sha512-sDIo/n5fJbs7V+4hOX86nUfT5TGsR2aROCrFwOGmk8AscP/n1z2roW5JV4Lz+aILf3wBZYW/7W2g2NRD00gpOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.esm.min.js" integrity="sha512-jZzg6pScDaxwQMIYigQwhPoykbqFDJ2HgeXkeMAQtKKEUbjAYZvtlSyTZdovoqKFbDG58S60zUdLlQDW6pwF7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js" integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/helpers.esm.js" integrity="sha512-q8VAbZG23p44LnzuQVJ0abDxOnlA1562eKVeywBgNsXVSCYRuT7eCdGtfn4MrEcEtGrTBwbsOQeQFjqdtL4fmw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/helpers.esm.min.js" integrity="sha512-1b6IKdJzKvjUfXuATUJs0a4ti8sBZHY0DKZ1O1UCj3cpw+IEKxUwG2UtXNOjS5/JkqxQ2v5GUMFn62mtZyXAfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!--JQuery-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -105,27 +101,17 @@
         <div class="row">
           <div class="welcome-text" style="width:100%; color:#ffffff; font-size; 20px;"> Welcome, Test User.
           </div>
-
-          <table>
-            <tr><th>Account Summary</th></tr>
-            <tr>
-                <td><canvas id="myAkaun" class="chart"></canvas></td>
-            </tr>
-          </table>
-          <div class="table">
-            <div class="cell">
-
-            </div>
+          <div class="chart-container">
+            <canvas id="myAkaun"></canvas>
           </div>
-          <div class="table">
-            <div class="cell">
+          <div class="">
 
-            </div>
           </div>
-          <div class="table">
-            <div class="cell">
+          <div class="">
 
-            </div>
+          </div>
+          <div class="">
+
           </div>
         </div>
       </div>

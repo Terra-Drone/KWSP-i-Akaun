@@ -40,14 +40,14 @@ ul li {
 	background-size: cover;
 	text-align: center;
 	color: #171717;
-	min-height: 75vh;
+	min-height: 100vh;
 	margin-bottom: 10px;
 }
 .col-md-12 {
 	position: relative;
 	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 .container {
 	padding-right: 15px;
@@ -370,10 +370,44 @@ ul li {
 
 }
 /*Main Page*/
-#myAkaun {
-	min-width: 450px;
-	max-width: 450px;
-	margin: auto;
+canvas {
+    max-width: 50% !important;
+    height: auto !important;
+		margin: auto;
+}
+table, th {
+    border: 3px solid #430092;
+		border-radius: 15px;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+		vertical-align: middle;
+}
+th {
+	color: #FFFFFF;
+	background-color: #430092;
+}
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.chart-legend ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.chart-legend span {
+	display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  margin-right: 16px;
+  margin-bottom: -2px;
+}
+.chart-legend li {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 /*Size Compat*/
@@ -390,7 +424,7 @@ ul li {
 
 @media (max-width: 942px) and (min-width: 321px) {
 	.welcome-text{
-    font-size: 3.5rem;
+    font-size: 5.0rem;
     font-weight: bold;
     line-height: 1;
     text-align: center;
@@ -461,7 +495,8 @@ ul li {
 	.overlay p{
 		font-size: 30px;
 	}
-	#myAkaun {
-		max-width: 325px;
+	.chart-container {
+		width: 100%;
+		margin:0;
 	}
 }

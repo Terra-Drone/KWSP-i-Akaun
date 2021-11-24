@@ -1,7 +1,7 @@
-var navbar = document.getElementById("navbar");
-var navi = document.getElementById("navi");
-var dropcontent = document.getElementsByClassName('dropdown-content');
-var dim = document.getElementsByClassName("dim");
+var navbar      = document.getElementById("navbar"),
+    navi        = document.getElementById("navi"),
+    dropcontent = document.getElementsByClassName('dropdown-content'),
+    dim         = document.getElementsByClassName("dim");
 
 //NAVBAR SETTINGS
 window.onscroll = function() {stickyNav()};
@@ -23,6 +23,7 @@ function hideDrop() {
   } else {
       navi.classList.remove("responsive");
   }
+
   if (dropcontent.style.display == "block") {
      dim.style.display = "block";
       navbar.style.boderRadius = "125rem 0 0 125rem";
@@ -37,53 +38,42 @@ function hideDrop() {
 
 //MAIN PAGE
 //Date for chart
-window.onload = function showDate() {
+function showDate() {
   today = new Date();
   var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+    document.getElementById("date").innerHTML = date;
 }
 
-var data = {
-  labels: [
-    "Akaun 1",
-    "Akaun 2"
-  ],
-  datasets: [
-    {
-      data: [12,2],
-      backgroundColor: [
-        "#430092",
-        "#36A2EB"
-      ],
-      hoverBackgroundColor: [
-        "#430092",
-        "#36A2EB"
-      ]
+window.onload = function(){
+  //Donut Chart
+  //dataset
+  var data = {
+    labels: ["Akaun 1","Akaun 2"],
+    datasets: [{
+      data: [12,3],
+      backgroundColor: ["#430092","#36A2EB"],
+      hoverBackgroundColor: ["#430092","#36A2EB"],
+      cutout: ["70%"],
     }]
-};
+  };
 
-var akaunBalance = new Chart(document.getElementById('myAkaun'), {
-  type: 'doughnut',
-  data: data,
-  options: {
-  	responsive: true,
-    legend: { display: false }
-  }
-});
+  //init & config
+  var chart = new Chart(document.getElementById('myAkaun'), {
+    type: 'doughnut',
+    data: data,
+    options: {
+      responsive: true,
+      title: { display: true, text: 'Chart.js Doughnut Chart'},
+      legend: { display: true, position: 'right', align: 'end'},
+      labels: { font: {size: 12}}
+    }
+  });
 
-Chart.pluginService.register({
-  beforeDraw: function(chart) {
-    var width = chart.chart.width,
-        height = chart.chart.height,
-        ctx = chart.chart.ctx;
+  Chart.pluginService.register({
+    beforeDraw: function(chart) {
 
-    ctx.restore();
-    var fontSize = (height / 114).toFixed(2);
-    ctx.font = fontSize + "em sans-serif";
-    ctx.textBaseline = "middle";
+    }
+  });
 
-    var text = showDate();
-
-    ctx.fillText(text);
-    ctx.save();
-  }
-});
+  Chart.defaults.font.size = 16;
+}
