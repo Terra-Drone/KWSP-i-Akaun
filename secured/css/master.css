@@ -57,6 +57,7 @@ ul li {
 .row {
 	justify-content: center;
 	margin: auto;
+	padding: 15px 0;
 }
 /*NAVBAR*/
 .responsive-navi {
@@ -212,17 +213,16 @@ ul li {
 }
 
 /*LOGIN*/
-.welcome-text{
-	padding-top: 7.5rem;
-	padding-bottom: 3.5rem;
-	font-size: 4.8rem;
-	font-weight: bold;
-	line-height: 1;
-	text-align: center;
-	letter-spacing: -0.2rem;
-	color: #ffffff;
-	text-shadow: 0 0 15px rgb(0 0 0 / 30%);
-	margin: auto;
+.welcome {
+	padding-top: 5.5rem;
+	max-width: 600;
+	height:auto;
+}
+.welcome-text {
+	font: bolder 50px sans-serif;
+	fill: white;
+	stroke: #430092;
+	stroke-width: 1;
 }
 .login-wrapper {
 	padding-top: 1.5rem;
@@ -370,27 +370,42 @@ ul li {
 
 }
 /*Main Page*/
+select {
+	border-radius: 15px;
+	background-color: #430092;
+	width: auto;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+option {
+	padding: 5px;
+}
 canvas {
-    max-width: 50% !important;
+    max-width: 45% !important;
     height: auto !important;
 		margin: auto;
 }
-table, th {
+.table {
+		margin: auto;
     border: 3px solid #430092;
-		border-radius: 15px;
+		border-radius: 10px;
     display: table;
     width: 100%;
-    table-layout: fixed;
 		vertical-align: middle;
 }
-th {
+.trow {
+		display: table-row;
+    vertical-align: middle;
+}
+
+#t-header {
 	color: #FFFFFF;
 	background-color: #430092;
 }
-.cell {
-    display: table-cell;
-    vertical-align: middle;
-}
+
 .chart-legend ul {
     list-style: none;
     margin: 0;
