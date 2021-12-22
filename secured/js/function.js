@@ -39,11 +39,10 @@ function hideDrop() {
 
 //MAIN PAGE
 //Date for chart
-function showDate() {
-  today = new Date();
-  var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
-    document.getElementById("date").innerHTML = date;
-}
+let today = new Date();
+
+var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+
 
 
 window.onload = function statementYear() {
@@ -58,9 +57,13 @@ window.onload = function(){
   //Donut Chart
   //dataset
   var data = {
-    labels: ["Akaun 1","Akaun 2"],
+    labels: [" Akaun 1"," Akaun 2"],
     datasets: [{
+<<<<<<< HEAD
       data: [1300.00, 895.75],
+=======
+      data: [1200.91, 300.31],
+>>>>>>> 49662a9206c74d265964007cc314763b8ecbb7e5
       backgroundColor: ["#430092","#36A2EB"],
       hoverBackgroundColor: ["#430092","#36A2EB"],
       cutout: ["70%"],
@@ -73,6 +76,7 @@ window.onload = function(){
     data: data,
     options: {
       responsive: true,
+<<<<<<< HEAD
       tooltips: {
         enabled: true,
         mode: 'single',
@@ -82,14 +86,35 @@ window.onload = function(){
       },
       legend: { display: true, position: 'left', align:'end'},
       labels: { font: {size: 16}}
+=======
+      legend: { display: false},
+      labels: { font: {size: 12}}
+>>>>>>> 49662a9206c74d265964007cc314763b8ecbb7e5
     }
   });
 
-  Chart.pluginService.register({
-    beforeDraw: function(chart) {
+  const centerDoughnutPlugin = {
+      id: "annotateDoughnutCenter",
+      beforeDraw: (chart) => {
+        let width = chart.width;
+        let height = chart.height;
+        let ctx = chart.ctx;
 
-    }
-  });
+        ctx.restore();
+        let fontSize = (height / 220).toFixed(2);
+        ctx.font = fontSize + "em sans-serif";
+        ctx.textBaseline = "middle";
 
-  Chart.defaults.font.size = 16;
+        let text = "As of: \n" + date;
+        let textX = Math.round((width - ctx.measureText(text).width)/2);
+        let textY = height / 1.8;
+
+        console.log("text x: ", textX);
+        console.log("text y: ", textY);
+
+        ctx.fillText(text, textX, textY);
+        ctx.save();
+      },
+    };
+  Chart.register(centerDoughnutPlugin);
 }

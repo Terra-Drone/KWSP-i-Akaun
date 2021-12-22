@@ -57,6 +57,7 @@ ul li {
 .row {
 	justify-content: center;
 	margin: auto;
+	padding: 15px 0;
 }
 /*NAVBAR*/
 .responsive-navi {
@@ -200,24 +201,18 @@ ul li {
 }
 
 /*LOGIN*/
-.welcome-text{
-	padding-top: 7.5rem;
-	padding-bottom: 3.5rem;
+.welcome {
+	padding-top: 5.5rem;
+	max-width: 600;
+	height:auto;
+}
+.welcome-text {
 	-webkit-font-smoothing: antialiased;
-	margin: auto;
-}
-svg {
-	margin: auto;
-  font   : bold 50px Century Gothic, Arial;
-  width  : 80%;
-  height : 75px;
-}
-
-text{
-  fill            : #FFFFFF;
-  stroke          : #430092;
-  stroke-width    : 1px;
-  stroke-linejoin : round;
+	font: bolder 50px sans-serif;
+	fill: white;
+	stroke: #430092;
+	stroke-width: 1;
+	stroke-join: round;
 }
 
 .login-wrapper {
@@ -366,12 +361,30 @@ text{
 
 }
 /*Main Page*/
+select {
+	border-radius: 15px;
+	background-color: #430092;
+	width: auto;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+option {
+	padding: 5px;
+}
 canvas {
+<<<<<<< HEAD
     max-width: 60% !important;
+=======
+    max-width: 45% !important;
+>>>>>>> 49662a9206c74d265964007cc314763b8ecbb7e5
     height: auto !important;
 		margin: auto;
 }
 .table {
+<<<<<<< HEAD
 	border: 3px #430092 solid;
 	border-collapse: collapse !important;
 	border-spacing: 0;
@@ -383,6 +396,22 @@ canvas {
 }
 .table-header {
 	margin: 0;
+=======
+		margin: auto;
+    border: 3px solid #430092;
+		border-radius: 10px;
+    display: table;
+    width: 100%;
+		vertical-align: middle;
+}
+.trow {
+		display: table-row;
+    vertical-align: middle;
+}
+
+#t-header {
+	color: #FFFFFF;
+>>>>>>> 49662a9206c74d265964007cc314763b8ecbb7e5
 	background-color: #430092;
 	border: 3px #430092 solid;
 	border-radius: 15px 15px 0 0;
