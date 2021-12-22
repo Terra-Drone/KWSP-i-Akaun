@@ -74,59 +74,75 @@
   echo "Connected Successfully.";
   ?>
 
-  <div class="responsive-navi">
-  	<div class="responsive-navi-mobile" id="navbar">
-  		<div id="logo">
-  			<a href="https://www.kwsp.gov.my/en/home"><img src="../secured/images/logo_en.png"></a>
-  		</div>
-  		<div class="rc_nav" id="navi">
-  			<ul>
-  				<li class="dropdown" id="profile"><a href="#">PROFILE</a></li>
-  				<li class="dropdown" id="nomination"><a href="#">NOMINATION</a></li>
-  				<li class="dropdown" id="shariah"><a href="#">SIMPANAN SHARIAH</a></li>
-  				<li class="dropdown" id="enquiry"><a href="">ENQUIRY</a></li>
-  				<li class="dropdown" id="investment"><a href="#">INVESTMENT</p></li>
-          <li class="dropdown" id="withdrawal"><a href="#">WITHDRAWAL</p></li>
-          <li class="dropdown" id="inbox"><a href="#">INBOX</p></li>
-  				<li><a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="hideDrop()">&#9776;</a></li>
-  			</ul>
-  		</div>
-  		<div class="lang">
-  			<ul>
-  				<li><a href="main_bm.html">BM</a></li>
-  				<li><a href="#" class="selected">EN</a></li>
-  			</ul>
-  		</div>
+  <div class="responsive-navi" id="navbar">
+  	<div id="logo"><a href="https://www.kwsp.gov.my/en/home"><img src="../secured/images/logo_en.png"></a></div>
+  	<div class="rc_nav" id="navi">
+  		<a href="#" class="dropdown">PROFILE</a>
+  		<a href="#" class="dropdown">NOMINATION</a>
+      <a href="#" class="dropdown">WITHDRAWAL</a></li>
+      <a href="#" class="dropdown">SHARIAH SAVINGS</a>
+  		<a href="#" class="dropdown">ENQUIRY</a></li>
+  		<a href="#" class="dropdown">INVESTMENT</a></li>
+      <a href="#" class="dropdown">INBOX</a></li>
+  		<a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="hideDrop()">&#9776;</a>
+  	</div>
+  	<div class="lang">
+  		<a href="main_bm.html">BM</a>
+  		<a href="#" class="selected">EN</a>
   	</div>
   </div>
+
   <div class="main">
     <div class="col-md-12">
       <div class="container">
+        <div class="welcome-text">
+          <svg viewBox="0 0 450 50"><text y="50">Welcome, Test User.</text></svg>
+        </div>
+
         <div class="row">
-          <div class="welcome-text" style="width:100%; color:#ffffff; font-size; 20px;"> Welcome, Test User.
-          </div>
-
-          <table>
-            <tr><th>Account Summary</th></tr>
-            <tr>
-                <td><canvas id="myAkaun" class="chart"></canvas></td>
-            </tr>
-          </table>
           <div class="table">
+            <div class="table-header">Account Summary</div>
             <div class="cell">
-
+              <canvas id="myAkaun"></canvas>
             </div>
           </div>
-          <div class="table">
-            <div class="cell">
+        </div>
 
+        <div class="row">
+          <div class="table">
+            <div class="table-header">Transactions</div>
+            <div class="cell">
+              No transasction data available.<!--Insert JS/Jquery link here-->
             </div>
           </div>
-          <div class="table">
-            <div class="cell">
+        </div>
 
+        <div class="row">
+          <div class="table">
+            <div class="table-header">Contributions</div>
+            <div class="cell">
+              No transaction data available.<!--Insert JS/Jquery link here-->
             </div>
           </div>
+        </div>
+
+        <div class="row">
+          <div class="table">
+            <div class="table-header">Withdrawals</div>
+            <div class="cell">
+              No transaction data available.<!--Insert JS/Jquery link here-->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <form name="form1" id="form1" action="/action_page.php">
+            Year: <select name="subject" id="selYear"size="1">
+              <option value="" selected="selected">2021</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Download Statement" id="download">
+          </form>
         </div>
       </div>
     </div>

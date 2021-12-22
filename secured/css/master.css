@@ -61,15 +61,10 @@ ul li {
 /*NAVBAR*/
 .responsive-navi {
 	margin: 0 auto;
-	width: 95%;
-}
-.responsive-navi-mobile {
+	width: 100%;
   background: white;
-	margin-top: 1.0rem;
-	padding: 5px 10px;
-	border-radius: 125.0rem;
+	padding: 10px;
   z-index: 15;
-	width: inherit;
   position: fixed;
 	display: -webkit-box;
 	display: -moz-box;
@@ -96,16 +91,10 @@ ul li {
 
 /*Center Navbar Setting*/
 
-.rc_nav ul li {
-	list-style-type: none;
-}
 .dropdown {
 	transition: all 350ms ease;
 	padding: 12px 20px 0px 20px;
 	position: absolute;
-}
-.dropdown a {
-	cursor: pointer;
 	margin: auto;
 	color: #430092;
 	font-size: 16px;
@@ -116,10 +105,12 @@ ul li {
 	background-color: inherit;
 	z-index: 35;
 }
-.dropdown:hover a {
+
+.dropdown:hover {
 	transition: all 250ms ease;
 	color:#999999;
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: red;
 }
 .dropdown-content {
 	display: none;
@@ -156,10 +147,10 @@ ul li {
 	left: 2.5%;
 
 }
-.responsive-navi-mobile .icon {
+.icon {
 	display: none;
 }
-.responsive-navi-mobile .icon:hover {
+.icon:hover {
 	text-decoration: none;
 }
 /*Language*/
@@ -167,17 +158,14 @@ ul li {
 	margin: 5px;
 	padding-left: 0;
 }
-.lang li {
-	list-style-type: none;
-}
-.lang li a {
+.lang a {
 	padding: 5px 10px;
 	font-size: 14px;
 	color: #999999;
 	text-align: center;
 	text-decoration: none;
 }
-.lang li a:hover {
+.lang a:hover {
 	background-color: #430092;
 	color:#FFFFFF;
 	border-radius: 125.0rem;
@@ -215,15 +203,23 @@ ul li {
 .welcome-text{
 	padding-top: 7.5rem;
 	padding-bottom: 3.5rem;
-	font-size: 4.8rem;
-	font-weight: bold;
-	line-height: 1;
-	text-align: center;
-	letter-spacing: -0.2rem;
-	color: #ffffff;
-	text-shadow: 0 0 15px rgb(0 0 0 / 30%);
+	-webkit-font-smoothing: antialiased;
 	margin: auto;
 }
+svg {
+	margin: auto;
+  font   : bold 50px Century Gothic, Arial;
+  width  : 80%;
+  height : 75px;
+}
+
+text{
+  fill            : #FFFFFF;
+  stroke          : #430092;
+  stroke-width    : 1px;
+  stroke-linejoin : round;
+}
+
 .login-wrapper {
 	padding-top: 1.5rem;
 	padding-left: 15px;
@@ -371,26 +367,30 @@ ul li {
 }
 /*Main Page*/
 canvas {
-    max-width: 50% !important;
+    max-width: 60% !important;
     height: auto !important;
 		margin: auto;
 }
-table, th {
-    border: 3px solid #430092;
-		border-radius: 15px;
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-		vertical-align: middle;
+.table {
+	border: 3px #430092 solid;
+	border-collapse: collapse !important;
+	border-spacing: 0;
+	border-radius: 15px;
+	width: auto;
+	padding: 0 0 15px 0;
+	margin: 0;
+	background-color: #FFFFFF;
 }
-th {
-	color: #FFFFFF;
+.table-header {
+	margin: 0;
 	background-color: #430092;
+	border: 3px #430092 solid;
+	border-radius: 15px 15px 0 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
 }
-.cell {
-    display: table-cell;
-    vertical-align: middle;
-}
+
 .chart-legend ul {
     list-style: none;
     margin: 0;
@@ -412,12 +412,12 @@ th {
 
 /*Size Compat*/
 @media screen and (max-width: 942px) {
-  .rc_nav .dropdown {
+  .dropdown {
 		display: none;
 	}
-  .rc_nav .icon {
+	.icon {
+		display: block;
     float: right;
-    display: block;
     width: 60px;
   }
 }
@@ -430,7 +430,8 @@ th {
     text-align: center;
     letter-spacing: -0.2rem;
     color: #ffffff;
-    text-shadow: 0 0 15px rgb(0 0 0 / 30%);
+    text-shadow: -1px -1px 0 #430092;
+		-webkit-font-smoothing: antialiased;
 	}
 	.responsive-navi {
 		width: 100%;
@@ -441,17 +442,15 @@ th {
 		padding: 10px 10px;
 		position: fixed;
 	}
-	.responsive {
+	.rc_nav {
 		position: relative;
-		margin:0;
-		width: 100%;
 		text-decoration: none;
 		background-color: rgba(255, 255, 255, 1.0);
 		flex-flow: column wrap;
 		align-items: flex-start;
 		z-index: -1;
 	}
-	.responsive .icon {
+	.rc_nav .icon {
 		margin: auto;
 		right: 5px;
 		width: 50px;
@@ -459,9 +458,10 @@ th {
 		color: #430092;
 		text-decoration: none;
 	}
-	.responsive .dropdown {
+	.rc_nav .dropdown {
 		float: none;
-		display: list-item;
+		display: flex;
+		flex-flow: column wrap;
 		color: #430092;
 		text-decoration: none;
 		padding: 16px 0;

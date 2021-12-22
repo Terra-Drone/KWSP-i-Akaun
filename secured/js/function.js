@@ -3,6 +3,7 @@ var navbar      = document.getElementById("navbar"),
     dropcontent = document.getElementsByClassName('dropdown-content'),
     dim         = document.getElementsByClassName("dim");
 
+
 //NAVBAR SETTINGS
 window.onscroll = function() {stickyNav()};
 var sticky = navbar.offsetTop;
@@ -26,7 +27,7 @@ function hideDrop() {
 
   if (dropcontent.style.display == "block") {
      dim.style.display = "block";
-      navbar.style.boderRadius = "125rem 0 0 125rem";
+      navbar.style.boderRadius = "0";
   } else {
      dim.style.display = "none";
      navbar.style.boderRadius = "125rem";
@@ -44,13 +45,22 @@ function showDate() {
     document.getElementById("date").innerHTML = date;
 }
 
+
+window.onload = function statementYear() {
+  var selYear = document.getElementById("selYear");
+
+  thisYear = new Date();
+  var a = thisYear.getFullYear();
+  var b = thisYear.getFullYear()-1;
+  selYear.options[selYear.options.length] = new Option(a, b) 
+}
 window.onload = function(){
   //Donut Chart
   //dataset
   var data = {
     labels: ["Akaun 1","Akaun 2"],
     datasets: [{
-      data: [12,3],
+      data: [1300.00, 895.75],
       backgroundColor: ["#430092","#36A2EB"],
       hoverBackgroundColor: ["#430092","#36A2EB"],
       cutout: ["70%"],
@@ -63,9 +73,15 @@ window.onload = function(){
     data: data,
     options: {
       responsive: true,
-      title: { display: true, text: 'Chart.js Doughnut Chart'},
-      legend: { display: true, position: 'right', align: 'end'},
-      labels: { font: {size: 12}}
+      tooltips: {
+        enabled: true,
+        mode: 'single',
+        callbacks: {
+          label: function(tooltipItems, data) { return tooltipItems.labels + 'RM '}
+        }
+      },
+      legend: { display: true, position: 'left', align:'end'},
+      labels: { font: {size: 16}}
     }
   });
 
