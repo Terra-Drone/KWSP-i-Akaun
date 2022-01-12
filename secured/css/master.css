@@ -70,6 +70,7 @@ ul li {
 	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 100;
 }
 
 /* Style the links inside the navigation bar */
@@ -82,13 +83,13 @@ ul li {
 }
 
 /* Highlight the current page */
-.active {  background-color: #430092; }
+.active {  background-color: #E0B542; border-radius: 10px;}
 
 /* Logo image max size setting */
 #logo { position: block; }
 #logo img { margin-left: 0; max-width: 92px;}
 
-/* Hide the link that should open and close the topnav on small screens */
+/* Hide the link that should open and close the navbar on small screens */
 .topnav .icon { display: none;}
 
 /* Dropdown container - needed to position the dropdown content */
@@ -97,7 +98,7 @@ ul li {
   overflow: hidden;
 }
 
-/* Style the dropdown button to fit inside the topnav */
+/* Style the dropdown button to fit inside the navbar */
 .dropdown .dropbtn {
   font-size: 17px;
   border: none;
@@ -129,9 +130,11 @@ ul li {
   text-align: left;
 }
 
-/* Add a dark background on topnav links and the dropdown button on hover */
-.topnav a:not(:first-child)hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+/* Add a dark background on navbar links and the dropdown button on hover */
+.topnav a:not(:first-child):hover, .dropdown:hover .dropbtn {
+	transition: all 150ms ease;
+	border-radius: 10px;
+  background-color: #430092;
   color: white;
 }
 
@@ -184,7 +187,6 @@ ul li {
 .lang a:hover {
 	background-color: #430092 !important;
 	color:#FFFFFF;
-	border-radius: 125.0rem;
 	text-decoration: none;
 }
 #selected { color: #FD0000; }
@@ -192,16 +194,14 @@ ul li {
 
 /*navbar sticky setting*/
 .sticky {
-	margin: 0;
-	left: 0;
+	position: fixed;
+	top: 0;
 	width: 100%;
-	padding: 10px 10px;
-	border-radius: 0;
 }
 
 /*LOGIN*/
 .welcome {
-	margin-top: 4.0rem;
+	padding-top: 100px;
 	max-width: 600;
 	height:auto;
 }
@@ -373,24 +373,30 @@ canvas {
 	max-height: 400px !important;
 }
 
-.table {
+table, th, td {
 	border: 3px #430092 solid;
-	border-radius: 10px;
+	border-collapse: separate;
 	background-color: #FFFFFF;
-	display: table;
-}
-
-.trow {
-	display: table-row;
-  vertical-align: middle;
+	vertical-align: middle;
 	justify-content: center;
+	padding: 5px;
+	font-size: 15px;
 }
-#t-header {
+table { border-radius: 10px !important;}
+
+th {
 	color: #FFFFFF;
 	background-color: #430092;
 	font-size: 20px;
 	font-weight: bold;
 	color: white;
+}
+
+#sub th{ font-size: 15px;}
+#total {
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: right;
 }
 
 @media (max-width: 942px) and (min-width: 321px) {

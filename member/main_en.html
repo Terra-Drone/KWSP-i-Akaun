@@ -86,7 +86,7 @@
   echo "Connected Successfully.";
   ?>
 
-  <div class="topnav" id="myTopnav">
+  <div class="topnav" id="navbar">
     <a href="https://www.kwsp.gov.my/en/home" id="logo"><img src="../secured/images/logo_white.png"></a>
     <a href="#" class="active">Account</a>
     <a href="#">Profile</a>
@@ -99,6 +99,7 @@
     <div class="lang">
       <a href="#">BM</a>
       <a href="#" id="selected">EN</a>
+      <a href="#" id="logout">LOGOUT</a>
     </div>
   </div>
 
@@ -108,18 +109,47 @@
         <svg viewbox="0 0 600 50" class="welcome">
   					<text class="welcome-text" x="300" y="25" text-anchor="middle" style="font: bolder 30px sans-serif;">Welcome, Test User.</text>
   			</svg>
+
         <div class="row"><canvas id="myChart"></canvas></div>
+        <div class="row">
+          <table>
+            <tr>
+              <th colspan="6">Account Summary</th>
+            </tr>
+            <tr id="sub">
+              <th></th>
+              <th>Starting Balance<br>(RM)</th>
+              <th>In<br>(RM)</th>
+              <th>Out<br>(RM)</th>
+              <th>Annual Dividend<br>(RM)</th>
+              <th>Final Balance<br>(RM)</th>
+            </tr>
+            <tr>
+              <td>Account 1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Account 2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td colspan="5" id="total">Total</td>
+              <td></td>
+            </tr>
+          </table>
+
 
         <div class="row">
           <div class="table">
-            <div class="trow" id="t-header">Account Summary</div>
-            <div class="trow"></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="table">
-            <div class="trow" id="t-header">Transaction History</div>
+            <div class="trow" id="t-header">Contribution History</div>
             <div class="trow">No transaction data available.</div>
           </div>
         </div>

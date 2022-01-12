@@ -1,4 +1,5 @@
-var navbar = document.getElementById("myTopnav");
+var navbar = document.getElementById("navbar"),
+    sticky = navbar.offsetTop;
 
 
 //NAVBAR SETTINGS
@@ -6,11 +7,12 @@ function collapseNav() {
   if (navbar.className === "topnav") {
     navbar.className += " responsive";
   } else {
-    navbar.className = "topnav";
+    navbar.className = "navbar";
   }
 }
-window.onscroll = function() {stickyNav()};
-var sticky = navbar.offsetTop;
+
+window.onscroll = function() { stickyNav() };
+
 function stickyNav() {
   navbar.style.transition= "350ms ease";
   if (window.pageYOffset >= sticky) {
@@ -44,8 +46,8 @@ window.onload = function(){
     labels: [" Akaun 1"," Akaun 2"],
     datasets: [{
       data: [1300.00, 895.75],
-      backgroundColor: ["#430092","#36A2EB"],
-      hoverBackgroundColor: ["#430092","#36A2EB"],
+      backgroundColor: ["#430092","#E0B542"],
+      hoverBackgroundColor: ["#4336AB","#F0C34E"],
       cutout: ["70%"],
     }]
   };
